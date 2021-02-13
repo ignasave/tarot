@@ -1,11 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+import { playBlack } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import TopBarTitle from '../../components/TopBarTitle';
 import WhiteText from '../../components/WhiteText';
 
-const TimesRedirect = ({ navigation, inform }) => {
+const TimesRedirect = ({ navigation, inform, save }) => {
 	return (
 		<FontAndBackGround>
 			<TopBarTitle />
@@ -18,12 +19,12 @@ const TimesRedirect = ({ navigation, inform }) => {
 
 				<WhiteText>
 					<Text style={styles.text}>
-						Primero debes hacer la tirada antes de {inform ? 'ver el informe' : 'saber los tiempos'}
+						Primero debes hacer la tirada antes de {inform ? 'ver el informe' : save ? 'guardar' : 'saber los tiempos'}
 					</Text>
 				</WhiteText>
 
 				<TouchableOpacity onPress={() => navigation.navigate('TrowScreen')} style={styles.playButton}>
-					<Image source={require('../../assets/play-black.png')} style={styles.playImage} />
+					<Image source={playBlack} style={styles.playImage} />
 				</TouchableOpacity>
 			</View>
 			<BottomNavigation />

@@ -5,7 +5,7 @@ import { createStackNavigator, TransitionPresets } from '@react-navigation/stack
 import WelcomeScreen from '../screens/WelcomeScreen';
 import WelcomeLeyendScreen from '../screens/WelcomeLeyendScreen';
 import HomeScreen from '../screens/HomeScreen';
-import Inform from '../screens/Inform/Inform'
+import Inform from '../screens/Inform/Inform';
 import InstructionsScreen from '../screens/Instructions/InstructionsScreen';
 import Instructions2Screen from '../screens/Instructions/Instructions2Screen';
 import Instructions3Screen from '../screens/Instructions/Instructions3Screen';
@@ -22,14 +22,18 @@ import ThrowCardsShow from '../screens/Trow/ThrowCardsShow';
 import TimesShuffle from '../screens/Times/TimesShuffle';
 import TimesShow from '../screens/Times/TimesShow';
 import TimesRedirect from '../screens/Times/TimesRedirect';
-
+import ShareScreen from '../screens/ShareScreen';
+import SaveScreen from '../screens/SaveScreen';
 
 const Stack = createStackNavigator();
 
 const Navigation = () => {
 	return (
 		<NavigationContainer>
-			<Stack.Navigator initialRouteName='WelcomeScreen' screenOptions={{headerShown: false, gestureDirection: 'horizontal', ...TransitionPresets.FadeFromBottomAndroid}}>
+			<Stack.Navigator
+				initialRouteName='WelcomeScreen'
+				screenOptions={{ headerShown: false, gestureDirection: 'horizontal', ...TransitionPresets.FadeFromBottomAndroid }}
+			>
 				<Stack.Screen name='WelcomeScreen' component={WelcomeScreen} />
 				<Stack.Screen name='WelcomeLeyendScreen' component={WelcomeLeyendScreen} />
 				<Stack.Screen name='HomeScreen' component={HomeScreen} />
@@ -50,6 +54,8 @@ const Navigation = () => {
 				<Stack.Screen name='TimesShuffle' component={TimesShuffle} />
 				<Stack.Screen name='TimesShow' component={TimesShow} />
 				<Stack.Screen name='TimesRedirect' component={TimesRedirect} />
+				<Stack.Screen name='ShareScreen' component={ShareScreen} />
+				<Stack.Screen name='SaveScreen' component={SaveScreen} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

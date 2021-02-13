@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { documentWhite } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import InstructionsPage from '../../components/InstructionsPage';
@@ -21,30 +22,25 @@ const Instructions9Screen = ({ navigation }) => {
 					<View style={styles.textView}>
 						<WhiteText>
 							<Text style={styles.text}>
-								La lectura siempre habla del Consultante y 
-								fuerzas que actúan sobre sus infortunios.
-								¿Puede consultarse en nombrte de otras personas?
-								Si.
+								La lectura siempre habla del Consultante y fuerzas que actúan sobre sus infortunios. ¿Puede consultarse en
+								nombrte de otras personas? Si.
 							</Text>
 						</WhiteText>
 					</View>
 					<View style={styles.textView}>
 						<WhiteText>
-							<Text style={styles.text}>
-								Informe completo
-							</Text>
+							<Text style={styles.text}>Informe completo</Text>
 						</WhiteText>
 					</View>
 					<View style={styles.textView}>
 						<WhiteText>
 							<Text style={styles.text}>
-								Puedes tener un informe completo de tu lectura 
-								para imprimir o compartir, haciendo click en un 
-								boton como el siguiente
+								Puedes tener un informe completo de tu lectura para imprimir o compartir, haciendo click en un boton como el
+								siguiente
 							</Text>
 						</WhiteText>
 					</View>
-					<Image source={require('../../assets/document-white.png')} style={styles.image} />
+					<Image source={documentWhite} style={styles.image} />
 				</View>
 			</View>
 			<BottomNavigation navigation={navigation} rightArrow='Instructions10Screen' />

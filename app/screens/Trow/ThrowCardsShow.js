@@ -4,15 +4,14 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import FadeInOut from 'react-native-fade-in-out';
 
+import { cardBack as cardBackSource } from '../../resources/assets';
+
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import TopBarTitle from '../../components/TopBarTitle';
 import WhiteText from '../../components/WhiteText';
 
 import { ThrowContext } from '../../components/ThrowContextProvider';
-
-const cardBackSource = require('../../assets/card-back.png');
-const cardFrontSource = require('../../assets/card-front.jpg');
 
 const ThrowCardsShow = () => {
 	const cards = new Array(3).fill(1);
@@ -52,7 +51,6 @@ const ThrowCardsShow = () => {
 	const revealCardDay = () => setVisibleFrontDays(true);
 	const revealCardMonth = () => setVisibleFrontMonth(true);
 	const revealCardYear = () => setVisibleFrontYear(true);
-	
 
 	const seeDayCard = () => {};
 	const seeMonthCard = () => {};

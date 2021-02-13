@@ -2,13 +2,14 @@ import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 import WhiteText from './WhiteText';
+import { calaveraWhite } from '../resources/assets';
 import TarotAbsalonSubH from '../components/TarotAbsalonSubH';
 
 const TopBarTitle = ({ rigthImage = null }) => {
 	return (
 		<View style={styles.title}>
 			<View>
-				<Image source={require('../assets/calavera-white.png')} style={styles.image} />
+				<Image source={calaveraWhite} style={styles.image} />
 			</View>
 			<View style={styles.titleMessage}>
 				<WhiteText>

@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
 
-import { useAsyncStorage } from '@react-native-async-storage/async-storage';
+import { resetWhite, cardsGold } from '../../resources/assets';
 
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
@@ -17,12 +17,6 @@ const TrowScreen = ({ navigation }) => {
 	const [month, setMonth] = useState('Mes');
 	const [year, setYear] = useState('Año');
 	const [state, setState] = useContext(ThrowContext);
-	const { getItem, setItem } = useAsyncStorage('userData');
-
-	const writeItemToStorage = async (userData) => {
-		await setItem(JSON.stringify(userData));
-		setState((state) => ({ ...state, userData }));
-	};
 
 	const setUserData = () => {
 		const date = new Date();
@@ -39,7 +33,7 @@ const TrowScreen = ({ navigation }) => {
 				day: date.getDate(),
 			},
 		};
-		writeItemToStorage(userData);
+		setState((state) => ({ ...state, userData }));
 	};
 
 	const handleDayChange = (text) => {
@@ -154,13 +148,13 @@ const TrowScreen = ({ navigation }) => {
 				</View>
 				<View style={styles.actionContainer}>
 					<TouchableOpacity onPress={handleReset} style={styles.actionOptionContainer}>
-						<Image source={require('../../assets/reset-white.png')} style={styles.actionImage} />
+						<Image source={resetWhite} style={styles.actionImage} />
 						<WhiteText>
 							<Text style={styles.actionText}>Reiniciar</Text>
 						</WhiteText>
 					</TouchableOpacity>
 					<TouchableOpacity onPress={handleShuffle} style={styles.actionOptionContainer}>
-						<Image source={require('../../assets/cards-gold.png')} style={styles.actionImage} />
+						<Image source={cardsGold} style={styles.actionImage} />
 						<WhiteText>
 							<Text style={styles.actionText}>Mezclar</Text>
 						</WhiteText>

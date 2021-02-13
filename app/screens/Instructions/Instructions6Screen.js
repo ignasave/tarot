@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { angelWhite } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import InstructionsPage from '../../components/InstructionsPage';
@@ -20,7 +21,7 @@ const Instructions2Screen = ({ navigation }) => {
 							</Text>
 						</WhiteText>
 					</View>
-					<Image source={require('../../assets/angel-white.png')} style={styles.image} />
+					<Image source={angelWhite} style={styles.image} />
 					<View style={styles.textView}>
 						<WhiteText>
 							<Text style={styles.text}>CODIGO DE BENDICION: M7XY6UXOGA</Text>

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { StyleSheet, View, Animated, Easing } from 'react-native';
+import { roundSkullWhite } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import TopBarTitle from '../../components/TopBarTitle';
@@ -35,10 +36,7 @@ const ThrowShuffle = ({ navigation }) => {
 				<View
 					style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, justifyContent: 'center', alignItems: 'center' }}
 				>
-					<Animated.Image
-						style={[styles.skullImage, { transform: [{ rotate: spin }] }]}
-						source={require('../../assets/round-skull-white.png')}
-					/>
+					<Animated.Image style={[styles.skullImage, { transform: [{ rotate: spin }] }]} source={roundSkullWhite} />
 				</View>
 			</View>
 			<BottomNavigation />

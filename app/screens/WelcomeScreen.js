@@ -4,6 +4,8 @@ import { View, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
 import { ThrowContext } from '../components/ThrowContextProvider';
 import { useAsyncStorage } from '@react-native-async-storage/async-storage';
 
+import { calaveraWhite, playBlack } from '../resources/assets';
+
 import FontAndBackGround from '../components/FontAndBackGround';
 import TarotAbsalonSubH from '../components/TarotAbsalonSubH';
 import WhiteText from '../components/WhiteText';
@@ -33,7 +35,7 @@ const WelcomeScreen = ({ navigation }) => {
 					<Text style={styles.title}>{translation.mazoMaldito}</Text>
 				</WhiteText>
 				<TarotAbsalonSubH />
-				<Image source={require('../assets/calavera-white.png')} style={styles.skullImage} />
+				<Image source={calaveraWhite} style={styles.skullImage} />
 				<WhiteText>
 					<Text style={styles.text}>{translation.malosAugurios}</Text>
 				</WhiteText>
@@ -41,7 +43,7 @@ const WelcomeScreen = ({ navigation }) => {
 					<Text style={styles.dare}>{translation.seAtreve}</Text>
 				</WhiteText>
 				<TouchableOpacity onPress={() => navigation.navigate('WelcomeLeyendScreen')} style={styles.playButton}>
-					<Image source={require('../assets/play-black.png')} style={styles.playImage} />
+					<Image source={playBlack} style={styles.playImage} />
 				</TouchableOpacity>
 			</View>
 		</FontAndBackGround>

@@ -1,11 +1,10 @@
-import React from 'react'
+import React from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
 import { useFonts } from '@use-expo/font';
+import { background } from '../resources/assets';
 
-
-const FontAndBackGround = ({children}) => {
-
-    const [fontLoaded, fontError] = useFonts({
+const FontAndBackGround = ({ children }) => {
+	const [fontLoaded, fontError] = useFonts({
 		Abibas: require('../assets/fonts/Abibas.ttf'),
 		Belleza: require('../assets/fonts/Belleza-Regular.ttf'),
 	});
@@ -15,12 +14,12 @@ const FontAndBackGround = ({children}) => {
 		return null;
 	}
 
-    return (
-        <ImageBackground style={styles.background} source={require('../assets/background.jpg')}>
-            {children}
-        </ImageBackground>
-    )
-}
+	return (
+		<ImageBackground style={styles.background} source={background}>
+			{children}
+		</ImageBackground>
+	);
+};
 
 const styles = StyleSheet.create({
 	background: {
@@ -29,4 +28,4 @@ const styles = StyleSheet.create({
 	},
 });
 
-export default FontAndBackGround
+export default FontAndBackGround;

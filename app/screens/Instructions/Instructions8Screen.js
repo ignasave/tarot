@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
+import { clockWhite } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import InstructionsPage from '../../components/InstructionsPage';
@@ -25,7 +26,7 @@ const Instructions2Screen = ({ navigation }) => {
 							</Text>
 						</WhiteText>
 					</View>
-					<Image source={require('../../assets/clock-white.png')} style={styles.image} />
+					<Image source={clockWhite} style={styles.image} />
 					<View style={styles.textView}>
 						<WhiteText>
 							<Text style={styles.text}>

@@ -81,7 +81,7 @@ const HomeScreen = ({ navigation }) => {
 					</View>
 				</View>
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} rightArrow='TrowScreen' />
 		</FontAndBackGround>
 	);
 };

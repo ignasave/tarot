@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { StyleSheet, Text, View, TextInput, Image, TouchableOpacity } from 'react-native';
 
-import { resetWhite, cardsGold } from '../../resources/assets';
+import { resetWhite, cardsGold, eyeGold } from '../../resources/assets';
 
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
@@ -100,7 +100,7 @@ const TrowScreen = ({ navigation }) => {
 
 	return (
 		<FontAndBackGround>
-			<TopBarTitle />
+			<TopBarTitle rigthImage={eyeGold} />
 			<View style={styles.titleContainer}>
 				<WhiteText>
 					<Text style={styles.title}>Tirada de Augurios</Text>
@@ -161,7 +161,7 @@ const TrowScreen = ({ navigation }) => {
 					</TouchableOpacity>
 				</View>
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} />
 		</FontAndBackGround>
 	);
 };

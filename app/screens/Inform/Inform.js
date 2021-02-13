@@ -1,12 +1,14 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+import { documentGold } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
+import { GetTriangles } from '../../components/Triangle';
+import TimesRedirect from '../Times/TimesRedirect';
 import TopBarTitle from '../../components/TopBarTitle';
 import WhiteText from '../../components/WhiteText';
-import { GetTriangles } from '../../components/Triangle';
 import { ThrowContext } from '../../components/ThrowContextProvider';
-import TimesRedirect from '../Times/TimesRedirect';
 
 const Inform = ({ navigation }) => {
 	const [{ userData }] = useContext(ThrowContext);
@@ -17,7 +19,7 @@ const Inform = ({ navigation }) => {
 
 	return (
 		<FontAndBackGround>
-			<TopBarTitle />
+			<TopBarTitle rigthImage={documentGold} />
 			<View style={styles.container}>
 				<View style={styles.titleContainer}>
 					<WhiteText>
@@ -91,7 +93,7 @@ const Inform = ({ navigation }) => {
 					</View>
 				</View>
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} rightArrow='HomeScreen' />
 		</FontAndBackGround>
 	);
 };

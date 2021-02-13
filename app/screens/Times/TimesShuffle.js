@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from 'react';
 import { StyleSheet, View, Animated, Easing } from 'react-native';
+
 import { roundSkullWhite } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
@@ -51,7 +52,7 @@ const TimesSuffle = ({ navigation }) => {
 					<Animated.Image style={[styles.skullImage, { transform: [{ rotate: spin }] }]} source={roundSkullWhite} />
 				</View>
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} />
 		</FontAndBackGround>
 	);
 };

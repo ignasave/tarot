@@ -11,7 +11,7 @@ import TopBarTitle from '../components/TopBarTitle';
 import WhiteText from '../components/WhiteText';
 import TimesRedirect from './Times/TimesRedirect';
 
-const SaveScreen = ({}) => {
+const SaveScreen = ({ navigation }) => {
 	const [state, setState] = useContext(ThrowContext);
 	const { setItem } = useAsyncStorage('userData');
 
@@ -37,7 +37,7 @@ const SaveScreen = ({}) => {
 				</WhiteText>
 				<Image source={checkGold} style={styles.image} />
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} rightArrow='HomeScreen' />
 		</FontAndBackGround>
 	);
 };

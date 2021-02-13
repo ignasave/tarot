@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+import { instruccionesYellow } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import InstructionsPage from '../../components/InstructionsPage';
@@ -9,7 +11,7 @@ import WhiteText from '../../components/WhiteText';
 const InstructionsScreen = ({ navigation }) => {
 	return (
 		<FontAndBackGround>
-			<TopBarTitle />
+			<TopBarTitle rigthImage={instruccionesYellow} />
 			<View style={styles.container}>
 				<InstructionsPage page={1} />
 				<View style={styles.textContainer}>
@@ -61,6 +63,6 @@ const styles = StyleSheet.create({
 		marginHorizontal: 20,
 	},
 	textView: {
-		marginVertical: 20
-	}
+		marginVertical: 20,
+	},
 });

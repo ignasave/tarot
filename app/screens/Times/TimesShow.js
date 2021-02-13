@@ -1,9 +1,8 @@
 import React, { useState, useContext } from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, ImageBackground, TouchableOpacity } from 'react-native';
-
 import FadeInOut from 'react-native-fade-in-out';
 
-import { cardBack as cardBackSource, cardFront as cardFrontSource } from '../../resources/assets';
+import { cardBack as cardBackSource, cardFront as cardFrontSource, clockGold } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import TopBarTitle from '../../components/TopBarTitle';
@@ -11,7 +10,7 @@ import WhiteText from '../../components/WhiteText';
 
 import { ThrowContext } from '../../components/ThrowContextProvider';
 
-const TimesShow = () => {
+const TimesShow = ({ navigation }) => {
 	const cards = new Array(3).fill(1);
 
 	const [state] = useContext(ThrowContext);
@@ -52,7 +51,7 @@ const TimesShow = () => {
 
 	return (
 		<FontAndBackGround>
-			<TopBarTitle />
+			<TopBarTitle rigthImage={clockGold} />
 			<View style={styles.container}>
 				<View style={styles.topCardsContainer}>
 					<View style={styles.topCard}>
@@ -134,14 +133,14 @@ const TimesShow = () => {
 				<View style={{ flex: 1 }}>
 					<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} removeClippedSubviews={true}>
 						{cards.map((card, i) => (
-							<TouchableOpacity key={i} onPress={() => handleCardPress()}>
+							<TouchableOpacity key={i} onPress={handleCardPress}>
 								<Image style={styles.card} source={cardBackSource} />
 							</TouchableOpacity>
 						))}
 					</ScrollView>
 				</View>
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} leftArrow='HomeScreen' rightArrow='HomeScreen' />
 		</FontAndBackGround>
 	);
 };

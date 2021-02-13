@@ -4,7 +4,7 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import FadeInOut from 'react-native-fade-in-out';
 
-import { cardBack as cardBackSource } from '../../resources/assets';
+import { cardBack as cardBackSource, eyeGold } from '../../resources/assets';
 
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
@@ -13,7 +13,7 @@ import WhiteText from '../../components/WhiteText';
 
 import { ThrowContext } from '../../components/ThrowContextProvider';
 
-const ThrowCardsShow = () => {
+const ThrowCardsShow = ({ navigation }) => {
 	const cards = new Array(3).fill(1);
 
 	const [state] = useContext(ThrowContext);
@@ -58,7 +58,7 @@ const ThrowCardsShow = () => {
 
 	return (
 		<FontAndBackGround>
-			<TopBarTitle />
+			<TopBarTitle rigthImage={eyeGold} />
 			<View style={styles.container}>
 				<View style={styles.topCardsContainer}>
 					<View style={styles.topCard}>
@@ -128,14 +128,14 @@ const ThrowCardsShow = () => {
 				<View style={{ flex: 1 }}>
 					<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} removeClippedSubviews={true}>
 						{cards.map((card, i) => (
-							<TouchableOpacity key={i} onPress={() => handleCardPress()}>
+							<TouchableOpacity key={i} onPress={handleCardPress}>
 								<Image style={styles.card} source={cardBackSource} />
 							</TouchableOpacity>
 						))}
 					</ScrollView>
 				</View>
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} leftArrow='TrowScreen' rightArrow='HomeScreen' />
 		</FontAndBackGround>
 	);
 };

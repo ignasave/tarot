@@ -1,16 +1,18 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+import { instruccionesYellow } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import InstructionsPage from '../../components/InstructionsPage';
 import TopBarTitle from '../../components/TopBarTitle';
 import WhiteText from '../../components/WhiteText';
-import Triangle from '../../components/Triangle'
+import Triangle from '../../components/Triangle';
 
 const InstructionsScreen = ({ navigation }) => {
 	return (
 		<FontAndBackGround>
-			<TopBarTitle />
+			<TopBarTitle rigthImage={instruccionesYellow} />
 			<View style={styles.container}>
 				<InstructionsPage page={5} />
 				<View style={styles.textContainer}>
@@ -74,6 +76,6 @@ const styles = StyleSheet.create({
 		marginHorizontal: 20,
 	},
 	textView: {
-		marginVertical: 20
-	}
+		marginVertical: 20,
+	},
 });

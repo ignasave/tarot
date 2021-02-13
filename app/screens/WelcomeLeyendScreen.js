@@ -1,15 +1,15 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
 import WhiteText from '../components/WhiteText';
 import FontAndBackGround from '../components/FontAndBackGround';
 import TopBarTitle from '../components/TopBarTitle';
-import BottomNavigation from '../components/BottomNavigation'
+import BottomNavigation from '../components/BottomNavigation';
 
 const WelcomeLeyendScreen = ({ navigation }) => {
 	return (
 		<FontAndBackGround>
-			<TopBarTitle/>
+			<TopBarTitle />
 			<View style={styles.container}>
 				<View style={styles.textContainer}>
 					<WhiteText>
@@ -34,7 +34,7 @@ const WelcomeLeyendScreen = ({ navigation }) => {
 					</WhiteText>
 				</View>
 			</View>
-			<BottomNavigation navigation={navigation} />
+			<BottomNavigation navigation={navigation} rightArrow='HomeScreen' />
 		</FontAndBackGround>
 	);
 };

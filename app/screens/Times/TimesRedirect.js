@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
+
 import { playBlack } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
@@ -27,7 +28,7 @@ const TimesRedirect = ({ navigation, inform, save }) => {
 					<Image source={playBlack} style={styles.playImage} />
 				</TouchableOpacity>
 			</View>
-			<BottomNavigation />
+			<BottomNavigation navigation={navigation} rightArrow='TrowScreen' leftArrow='HomeScreen' />
 		</FontAndBackGround>
 	);
 };

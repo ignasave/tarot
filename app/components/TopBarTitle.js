@@ -1,8 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
-import WhiteText from './WhiteText';
 import { calaveraWhite } from '../resources/assets';
+import WhiteText from './WhiteText';
 import TarotAbsalonSubH from '../components/TarotAbsalonSubH';
 
 const TopBarTitle = ({ rigthImage = null }) => {
@@ -17,7 +17,7 @@ const TopBarTitle = ({ rigthImage = null }) => {
 				</WhiteText>
 				<TarotAbsalonSubH />
 			</View>
-			<View>{rigthImage ? <Image source={rigthImage} style={styles.image} /> : <View style={styles.emptyBox} />}</View>
+			<View>{rigthImage ? <Image source={rigthImage} style={styles.rigthImage} /> : <View style={styles.emptyBox} />}</View>
 		</View>
 	);
 };
@@ -28,6 +28,12 @@ const styles = StyleSheet.create({
 	image: {
 		width: 75,
 		height: 75,
+		resizeMode: 'contain',
+	},
+	rigthImage: {
+		marginLeft: 15,
+		width: 60,
+		height: 60,
 		resizeMode: 'contain',
 	},
 	title: {

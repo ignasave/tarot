@@ -1,5 +1,7 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+import { instruccionesYellow } from '../../resources/assets';
 import BottomNavigation from '../../components/BottomNavigation';
 import FontAndBackGround from '../../components/FontAndBackGround';
 import InstructionsPage from '../../components/InstructionsPage';
@@ -9,7 +11,7 @@ import WhiteText from '../../components/WhiteText';
 const Instructions4Screen = ({ navigation }) => {
 	return (
 		<FontAndBackGround>
-			<TopBarTitle />
+			<TopBarTitle rigthImage={instruccionesYellow} />
 			<View style={styles.container}>
 				<InstructionsPage page={4} />
 				<View style={styles.textContainer}>
@@ -21,9 +23,8 @@ const Instructions4Screen = ({ navigation }) => {
 					<View style={styles.textView}>
 						<WhiteText>
 							<Text style={styles.text}>
-								Esperamos que Usted pueda resolver o minimizar estos augurios.
-								 Con éste Mazo Maldito Absalón obtiene 1 Código de Bendición
-								, para dirigirse a nuestra Tienda Esotérica web, y acceder a importante información
+								Esperamos que Usted pueda resolver o minimizar estos augurios. Con éste Mazo Maldito Absalón obtiene 1
+								Código de Bendición , para dirigirse a nuestra Tienda Esotérica web, y acceder a importante información
 								sobre diversas fórmulas mágicas y espirituales para anular o prevenir cada tipo de Mal Augurio.
 							</Text>
 						</WhiteText>
@@ -54,6 +55,6 @@ const styles = StyleSheet.create({
 		marginHorizontal: 20,
 	},
 	textView: {
-		marginVertical: 20
-	}
+		marginVertical: 20,
+	},
 });

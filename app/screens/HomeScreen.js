@@ -13,7 +13,7 @@ const HomeScreen = ({ navigation }) => {
 		try {
 			const result = await Share.share({
 				message:
-					'Mazo Maldito | "Malos augurios acechan el futuro de todos y cada uno" ¿Se atreve a desafiarlo? https://github.com/ignasave',
+					'Mazo Maldito | "Malos augurios acechan el futuro de todos y cada uno" ¿Se atreve a desafiarlo? https://expo.io/@/projects/tarotabsalon',
 				title: 'Mazo Malito',
 			});
 			if (result.action === Share.sharedAction) {

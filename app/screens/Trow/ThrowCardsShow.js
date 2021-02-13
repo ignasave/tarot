@@ -14,7 +14,7 @@ import WhiteText from '../../components/WhiteText';
 import { ThrowContext } from '../../components/ThrowContextProvider';
 
 const ThrowCardsShow = ({ navigation }) => {
-	const cards = new Array(3).fill(1);
+	const cards = new Array(40).fill(1);
 
 	const [state] = useContext(ThrowContext);
 

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "tarot",
-    "slug": "tarot",
+    "name": "TarotAbsalon",
+    "slug": "tarotabsalon",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./app/assets/icon.png",
@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./app/assets/favicon.png"
-    }
+    },
+    "description": "Mazo Maldito | Tarot Absalón \"Malos augurios acechan el futuro de todos y cada uno\" ¿Se atreve a desafiarlo?",
+    "githubUrl": "https://github.com/ignasave/tarot"
   }
 }

@@ -24,6 +24,7 @@ import TimesShow from '../screens/Times/TimesShow';
 import TimesRedirect from '../screens/Times/TimesRedirect';
 import ShareScreen from '../screens/ShareScreen';
 import SaveScreen from '../screens/SaveScreen';
+import ThrowCardSee from '../screens/Trow/ThrowCardSee';
 
 const Stack = createStackNavigator();
 
@@ -56,6 +57,7 @@ const Navigation = () => {
 				<Stack.Screen name='TimesRedirect' component={TimesRedirect} />
 				<Stack.Screen name='ShareScreen' component={ShareScreen} />
 				<Stack.Screen name='SaveScreen' component={SaveScreen} />
+				<Stack.Screen name='ThrowCardSee' component={ThrowCardSee} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);

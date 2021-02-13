@@ -52,9 +52,9 @@ const ThrowCardsShow = ({ navigation }) => {
 	const revealCardMonth = () => setVisibleFrontMonth(true);
 	const revealCardYear = () => setVisibleFrontYear(true);
 
-	const seeDayCard = () => {};
-	const seeMonthCard = () => {};
-	const seeYearCard = () => {};
+	const seeDayCard = () => navigation.navigate('ThrowCardSee', {image: userCards[0].card});
+	const seeMonthCard = () => navigation.navigate('ThrowCardSee', {image: userCards[1].card});
+	const seeYearCard = () => navigation.navigate('ThrowCardSee', {image: userCards[2].card});
 
 	return (
 		<FontAndBackGround>

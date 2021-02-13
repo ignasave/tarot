@@ -14,7 +14,7 @@ const Inform = ({ navigation }) => {
 	const [{ userData }] = useContext(ThrowContext);
 
 	if (!userData) {
-		return <TimesRedirect inform={true} />;
+		return <TimesRedirect navigation={navigation} inform={true} />;
 	}
 
 	return (

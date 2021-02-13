@@ -25,7 +25,7 @@ const SaveScreen = ({ navigation }) => {
 	}, []);
 
 	if (!state.userData) {
-		return <TimesRedirect save={true} />;
+		return <TimesRedirect navigation={navigation} save={true} />;
 	}
 
 	return (

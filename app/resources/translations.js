@@ -20,7 +20,7 @@ const translations = {
             en: 'Dare to challenge?',
             es: '¿Se atreve a desafiarlo?'
         }
-    }
+    },
 }
 
 export default translations

@@ -15,7 +15,7 @@ import { getTranslationSection } from '../resources/translationHandler';
 const WelcomeScreen = ({ navigation }) => {
 	const [state, setState] = useContext(ThrowContext);
 	const { getItem } = useAsyncStorage('userData');
-	const readStorage = false
+	const readStorage = true
 
 	const readItemFromStorage = async () => {
 		const userDataJSON = await getItem();
